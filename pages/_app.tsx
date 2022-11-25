@@ -9,10 +9,10 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
     return <div className='font-light'>
         <header className='h-[50px] shadow-md flex items-center px-[20px]'>
-            <span className={"text-2xl " + COLORFUL_TEXT}>Developer Nav</span>
+            <span className={"text-2xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500"}>Developer Nav</span>
             <ul className='ml-12 text-xl flex gap-8'>
-                <Link className={`transition-all duration-200 hover:text-violet-400 ${(router.pathname === '/' || router.pathname === '') && COLORFUL_TEXT}`} href={'/'}>Tools</Link>
-                <Link className={`transition-all duration-200 hover:text-violet-400 ${router.pathname === '/solutions' && COLORFUL_TEXT}`} href={'/solutions'}>Solutions</Link>
+                <Link className={`transition-all duration-100 ${COLORFUL_TEXT} ${(router.pathname === '/' || router.pathname === '') ? 'text-transparent' : 'text-gray-900'}`} href={'/'}>Tools</Link>
+                <Link className={`transition-all duration-100 ${COLORFUL_TEXT} ${router.pathname === '/solutions' ? 'text-transparent' : 'text-gray-900'}`} href={'/solutions'}>Solutions</Link>
             </ul>
         </header>
         <Component {...pageProps} />

@@ -16,7 +16,7 @@ export default function Solutions () {
             <div className='mb-2'>
                 {item.tags.map(tag => <Tag key={tag}>{tag}</Tag>)}
             </div>
-            <ul class='feature-list text-sm text-stone-400'>
+            <ul className='text-sm text-stone-400'>
               {item.featureList.map(feature => (
                 <li key={feature}>{feature}</li>
               ))}
