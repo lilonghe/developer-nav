@@ -1,4 +1,5 @@
 import Tag from '../../components/tag';
+import { solutionList } from '../../data/solution'
 
 export default function Solutions () {
   return (
@@ -10,7 +11,7 @@ export default function Solutions () {
             href={item.repository}
             target='_blank'
             rel='noreferrer'
-            className='flex flex-col w-[300px] p-4 rounded overflow-hidden shadow-md'
+            className='flex flex-col w-[300px] p-4 rounded overflow-hidden shadow transition-all duration-200 hover:shadow-md'
           >
             <h3 className="text-xl mb-2">{item.name}</h3>
             <div className='mb-2'>
@@ -27,36 +28,3 @@ export default function Solutions () {
     </div>
   )
 }
-
-const solutionList = [
-  {
-    name: 'React 权限检查',
-    featureList: [
-      '提供 Auth 组件',
-      '提供 useAuth hook',
-      '提供 React-Router 路由守卫案例'
-    ],
-    repository: 'https://stackblitz.com/edit/vitejs-vite-7nrbfd',
-    tags: ['React', '权限']
-  },
-  {
-    name: 'Vue3 权限检查',
-    featureList: [
-      '提供 Auth 组件',
-      '提供 useAuth hook',
-      '提供 Vue-Router 路由守卫案例'
-    ],
-    repository: 'https://stackblitz.com/edit/vitejs-vite-yk5qlg',
-    tags: ['Vue3', '权限']
-  },
-  {
-    name: 'Webpack 实时 Mock',
-    featureList: [
-      '实时更新 Mock 信息',
-      '可以获取请求信息填充返回',
-      '支持 JS 和 JSON 两种配置方式'
-    ],
-    repository: 'https://github.com/lilonghe/solution-frontend-mockdata',
-    tags: ['Webpack', 'Mock']
-  }
-]
