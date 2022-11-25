@@ -1,31 +1,28 @@
+import { COLORFUL_TEXT } from "../utils/constant"
+
 export default function Index() {
     return (
-        <div>
-            <header className='h-[40px] shadow-md flex items-center p-[20px] text-xl'>
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">Developer Nav</span>
-            </header>
-            <div className="m-[20px] font-light">
-                <h2 className="text-lg mb-4">
-                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">可视化/Visualization</span>
-                </h2>
-                <div className='flex wrap gap-4'>
-                    {data.map(item => <a key={item.name}
-                        href={item.url}
-                        target='_blank'
-                        className='flex flex-col w-[200px] rounded overflow-hidden shadow-md' rel="noreferrer">
-                        <div
-                            className={`h-[100px] bg-center bg-[length:100%_100%] hover:bg-[length:150%_150%] transition-all duration-300`}
-                            style={{ backgroundImage: `url(${item.poster}` }}>
-                            <h3 className="h-full flex justify-center items-center text-xl text-white drop-shadow-md bg-gradient-to-r from-stone-500/30 to-blue-500/30">{item.name}</h3>
-                        </div>
-                        <div className="p-3 text-sm">
-                            {item.intro}
-                        </div>
-                        <div className="px-3 pb-3 text-xs text-stone-400">
-                            {item.summary}
-                        </div>
-                    </a>)}
-                </div>
+        <div className="m-[20px]">
+            <h2 className="text-lg mb-4">
+                <span className={COLORFUL_TEXT}>Visualization</span>
+            </h2>
+            <div className='flex wrap gap-4'>
+                {data.map(item => <a key={item.name}
+                    href={item.url}
+                    target='_blank'
+                    className='flex flex-col w-[200px] rounded overflow-hidden shadow-md' rel="noreferrer">
+                    <div
+                        className={`h-[100px] bg-center bg-[length:100%_100%] hover:bg-[length:150%_150%] transition-all duration-300`}
+                        style={{ backgroundImage: `url(${item.poster}` }}>
+                        <h3 className="h-full flex justify-center items-center text-xl text-white drop-shadow-md bg-gradient-to-r from-stone-500/30 to-blue-500/30">{item.name}</h3>
+                    </div>
+                    <div className="p-3 text-sm">
+                        {item.intro}
+                    </div>
+                    <div className="px-3 pb-3 text-xs text-stone-400">
+                        {item.summary}
+                    </div>
+                </a>)}
             </div>
         </div>
     )
