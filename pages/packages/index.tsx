@@ -1,11 +1,12 @@
-import { COLORFUL_TEXT } from "../utils/constant"
-import { data } from '../data/tool'
+import { COLORFUL_TEXT } from "../../utils/constant"
+import { data } from '../../data/package'
+import Tag from "../../components/tag"
 
 export default function Index() {
     return (
         <div className="m-[20px]">
             <div className="mb-1 text-stone-400 italic text-sm">
-                “本页面列出项目正规对开发或者调试过程中有帮助的工具”
+                “本页面列出项目中用到的各种库，帮助实现业务需求”
             </div>
             {data.map(cate =>
                 <div key={cate.name} className="mb-8">
@@ -22,8 +23,11 @@ export default function Index() {
                                 style={{ backgroundImage: `url(${item.poster}` }}>
                                 <h3 className="h-full flex justify-center items-center text-xl text-white drop-shadow-md bg-gradient-to-r from-stone-500/30 to-blue-500/30">{item.name}</h3>
                             </div>
-                            <div className="p-3 text-sm">
+                            <div className="p-3 pb-1 text-sm">
                                 {item.intro}
+                            </div>
+                            <div className="px-3 mb-1">
+                                <Tag>{item.language}</Tag>
                             </div>
                             <div className="px-3 pb-3 text-xs text-stone-400">
                                 {item.summary}

@@ -13,6 +13,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
             <ul className='ml-12 text-xl flex gap-8'>
                 <Link className={`transition-all duration-100 ${COLORFUL_TEXT} ${(router.pathname === '/' || router.pathname === '') ? 'text-transparent' : 'text-gray-900'}`} href={'/'}>Tools</Link>
                 <Link className={`transition-all duration-100 ${COLORFUL_TEXT} ${router.pathname === '/solutions' ? 'text-transparent' : 'text-gray-900'}`} href={'/solutions'}>Solutions</Link>
+                <Link className={`transition-all duration-100 ${COLORFUL_TEXT} ${router.pathname === '/packages' ? 'text-transparent' : 'text-gray-900'}`} href={'/packages'}>Packages</Link>
             </ul>
         </header>
         <Component {...pageProps} />
