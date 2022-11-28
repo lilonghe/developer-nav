@@ -1,4 +1,5 @@
 import { COLORFUL_TEXT } from '../../utils/constant'
+import Tag from '../tag';
 
 function Card({ data }: { data: IDataItem }) {
     return (
@@ -11,9 +12,12 @@ function Card({ data }: { data: IDataItem }) {
                 style={{ backgroundImage: `url(${data.poster}` }}>
                 <h3 className="h-full flex justify-center items-center text-xl text-white drop-shadow-md bg-gradient-to-r from-pink-500/30 to-blue-500/30">{data.name}</h3>
             </div>
-            <div className="p-3 text-sm">
+            <div className="p-3 pb-1 text-sm">
                 {data.intro}
             </div>
+            {data.tags && <div className='mb-1 pl-3 flex'>
+                {data.tags.map(item => <Tag key={item}>{item}</Tag>)}    
+            </div>}
             <div className="px-3 pb-3 text-xs text-stone-400">
                 {typeof data.summary === 'string' ? data.summary : data.summary?.map(str => <div key={str}>{str}</div>)}
             </div>

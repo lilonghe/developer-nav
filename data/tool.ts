@@ -4,7 +4,7 @@ export const data = [
         list: [
             {
                 name: 'Slidev',
-                tags: ['PPT'],
+                tags: ['PPT', 'Markdown'],
                 url: 'https://sli.dev/',
                 intro: 'Markdown 写 PPT',
                 poster: '/assets/images/Slidev.png',
@@ -25,7 +25,7 @@ export const data = [
             },
             {
                 name: 'JSON Crack',
-                tags: [],
+                tags: ['JSON'],
                 url: 'https://jsoncrack.com/',
                 intro: 'JSON 转成可视化树形结构',
                 poster: '/assets/images/jsoncrack.jpeg',
