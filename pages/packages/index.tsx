@@ -1,6 +1,5 @@
-import { COLORFUL_TEXT } from "../../utils/constant"
 import { data } from '../../data/package'
-import Tag from "../../components/tag"
+import Card from "../../components/card"
 
 export default function Index() {
     return (
@@ -8,34 +7,7 @@ export default function Index() {
             <div className="mb-1 text-stone-400 italic text-sm">
                 “本页面列出项目中用到的各种库，帮助实现业务需求”
             </div>
-            {data.map(cate =>
-                <div key={cate.name} className="mb-8">
-                    <h2 className="text-lg mb-4">
-                        <span className={COLORFUL_TEXT}>{cate.name}</span>
-                    </h2>
-                    <div className='flex wrap gap-4'>
-                        {cate.list.map(item => <a key={item.name}
-                            href={item.url}
-                            target='_blank'
-                            className='flex flex-col w-[200px] rounded overflow-hidden shadow transition-all duration-200 hover:shadow-md' rel="noreferrer">
-                            <div
-                                className={`h-[100px] bg-center bg-[length:100%_100%] hover:bg-[length:150%_150%] transition-all duration-300`}
-                                style={{ backgroundImage: `url(${item.poster}` }}>
-                                <h3 className="h-full flex justify-center items-center text-xl text-white drop-shadow-md bg-gradient-to-r from-stone-500/30 to-blue-500/30">{item.name}</h3>
-                            </div>
-                            <div className="p-3 pb-1 text-sm">
-                                {item.intro}
-                            </div>
-                            <div className="px-3 mb-1">
-                                <Tag>{item.language}</Tag>
-                            </div>
-                            <div className="px-3 pb-3 text-xs text-stone-400">
-                                {item.summary}
-                            </div>
-                        </a>)}
-                    </div>
-                </div>
-            )}
+            {data.map(cate => <Card.Group key={cate.name} data={cate}  />)}
         </div>
     )
 }
