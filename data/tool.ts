@@ -32,5 +32,17 @@ export const data = [
                 summary: '将 JSON 转成类似思维导图的属性结构，开发调试时比较方便查看数据结构'
             },
         ]
+    },
+    {
+        name: 'Debug',
+        list: [
+            {
+                name: 'vConsole',
+                url: 'https://github.com/Tencent/vConsole',
+                intro: 'H5 调试工具',
+                poster: '/assets/images/vConsole.png',
+                summary: '移动端网页调试工具，功能类似于 Chrome DevTools'
+            }
+        ]
     }
 ]
