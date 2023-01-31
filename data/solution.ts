@@ -18,6 +18,7 @@ export const solutionList = [
         summary: [
           '提供 Auth 组件',
           '提供 useAuth hook',
+          '提供 v-auth 指令',
           '提供 Vue-Router 路由守卫案例'
         ]
       },
